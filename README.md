@@ -27,7 +27,7 @@ implementation("com.google.firebase:firebase-analytics")
     val db = Firebase.firestore
 </pre>
 
-<h4>Write Data into Firebase</h4>
+<h4>Write Data into Firebase cloud</h4>
 <pre>
  val user1= hashMapOf(
             "name" to "Neel",
@@ -39,10 +39,6 @@ implementation("com.google.firebase:firebase-analytics")
             "lastName" to "Patel",
             "Birth Date" to "June 29,2002"
         )
-
-    val user_collection=db.collection("Users")
-        user_collection.document("user1").set(user1)
-        user_collection.document("user2").set(user2)
 </pre>
 
 <h4>Read Single Data from Firebase Cloude Databse</h4>
@@ -64,8 +60,6 @@ db.collection("Users").get().addOnSuccessListener { result->
                 val user=User(name,lastname,birthDate)
                 userList.add(user)
                 userListAdapter.notifyDataSetChanged()
-            }
-        }
 </pre>
 
 <h4> Update Data from Firebase Cloude Databse</h4>
