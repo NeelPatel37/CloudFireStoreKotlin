@@ -39,6 +39,9 @@ implementation("com.google.firebase:firebase-analytics")
             "lastName" to "Patel",
             "Birth Date" to "June 29,2002"
         )
+      val user_collection=db.collection("Users")
+        user_collection.document("user1").set(user1)
+        user_collection.document("user2").set(user2)
 </pre>
 
 <h4>Read Single Data from Firebase Cloude Databse</h4>
@@ -56,10 +59,9 @@ db.collection("Users").get().addOnSuccessListener { result->
                 val name=document.get("name").toString()
                 val lastname=document.get("lastName").toString()
                 val birthDate=document.get("Birth Date").toString()
-
-                val user=User(name,lastname,birthDate)
-                userList.add(user)
-                userListAdapter.notifyDataSetChanged()
+         val user_collection=db.collection("Users")
+        user_collection.document("user1").set(user1)
+        user_collection.document("user2").set(user2)
 </pre>
 
 <h4> Update Data from Firebase Cloude Databse</h4>
