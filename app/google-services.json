@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "960825224845",
+    "project_id": "cloudfirestorekotlin",
+    "storage_bucket": "cloudfirestorekotlin.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:960825224845:android:d4891e6fc39ed8a55ffcc4",
+        "android_client_info": {
+          "package_name": "com.example.cloudfirestorekotlin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxNc94xS4rDLsoPjrKM2DJGZhGA9VJ0UY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
