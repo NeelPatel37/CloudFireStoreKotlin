@@ -1,4 +1,4 @@
-<h2>Firebase</h2>
+<h2>Cloud Store Firebase Database</h2>
 
 <h4>Add Firebase Dependency</h4>
 
