@@ -22,8 +22,6 @@ implementation("com.google.firebase:firebase-analytics")
 <p>Store data into document and collection </p>
 
 
-
-
 <h4>Create Firebase Cloud Database</h4>
 <pre>
     val db = Firebase.firestore
@@ -50,9 +48,40 @@ implementation("com.google.firebase:firebase-analytics")
 <h4>Read Single Data from Firebase Cloude Databse</h4>
 <pre>
 val docRef=db.collection("Users").document("user1")
-
         docRef.get().addOnSuccessListener {document->
             binding.texview.text= document.data?.get("name").toString()
         }
-        
 </pre>
+
+<h4>Read All Data from Firebase Cloude Databse</h4>
+<pre>
+db.collection("Users").get().addOnSuccessListener { result->
+            for (document in result){
+                val name=document.get("name").toString()
+                val lastname=document.get("lastName").toString()
+                val birthDate=document.get("Birth Date").toString()
+
+                val user=User(name,lastname,birthDate)
+                userList.add(user)
+                userListAdapter.notifyDataSetChanged()
+            }
+        }
+</pre>
+
+<h4> Update Data from Firebase Cloude Databse</h4>
+<pre>
+ db.collection("Users")
+            .document("user1")
+            .update("name","XYZ")
+</pre>
+
+<h4> Delete Data from Firebase Cloude Databse</h4>
+<pre>
+    db.collection("Users")
+            .document("user2")
+            .delete()
+</pre>
+
+
+
+
